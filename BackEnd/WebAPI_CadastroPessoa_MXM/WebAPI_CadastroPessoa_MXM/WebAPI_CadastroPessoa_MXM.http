@@ -1,6 +1,0 @@
-@WebAPI_CadastroPessoa_MXM_HostAddress = http://localhost:5172
-
-GET {{WebAPI_CadastroPessoa_MXM_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

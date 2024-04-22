@@ -137,3 +137,9 @@ C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroP
 C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\linq2db.dll
 C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\Npgsql.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\System.Web.Cors.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\System.Web.Http.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\System.Web.Http.Cors.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\VsCodeWorkspace\ProjetoMXM\BackEnd\WebAPI_CadastroPessoa_MXM\WebAPI_CadastroPessoa_MXM\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

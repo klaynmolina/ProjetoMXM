@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using WebAPI_CadastroPessoa_MXM.DB;
 using WebAPI_CadastroPessoa_MXM.Service.PessoaService;
@@ -23,7 +24,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins("http://localhost:4200")
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
 
 app.UseHttpsRedirection();
 

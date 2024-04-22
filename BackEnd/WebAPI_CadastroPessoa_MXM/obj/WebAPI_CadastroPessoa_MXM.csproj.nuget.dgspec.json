@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj": {}
+    "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj": {}
   },
   "projects": {
-    "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj": {
+    "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
+        "projectUniqueName": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
         "projectName": "WebAPI_CadastroPessoa_MXM",
-        "projectPath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
+        "projectPath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
         "packagesPath": "C:\\Users\\vanes\\.nuget\\packages\\",
-        "outputPath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\obj\\",
+        "outputPath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vanes\\AppData\\Roaming\\NuGet\\NuGet.Config",

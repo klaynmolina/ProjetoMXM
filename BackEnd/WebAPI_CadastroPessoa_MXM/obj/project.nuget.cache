@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "srEJdDPc3PTdi70I8gEgr65h5LvgSQsTUbvEJb/Sill2qqTjhANGeq8M8fSw8SEq8vWdosHMyTZv/+cwIVHKEQ==",
+  "dgSpecHash": "HkLrSri67qn+vqt/+crKBpkrjpCQPqb3QaT+f6P3oIoUlXTpakktxEUeBsJK3oekG3zKneGmzDyOLt0PFJN1dA==",
   "success": true,
-  "projectFilePath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
+  "projectFilePath": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vanes\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\vanes\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

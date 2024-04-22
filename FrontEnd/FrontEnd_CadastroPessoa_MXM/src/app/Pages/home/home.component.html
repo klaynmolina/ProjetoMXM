@@ -1,0 +1,45 @@
+<div class="formulario">
+    <button>Cadastrar</button>
+    <div class="pesquisa">
+        <label>Pesquisar:</label>
+        <input type="text" placeholder="Pesquisar" (input)="buscar($event)">
+    </div>
+</div>
+
+<table class="tabela">
+    <thead>
+        <tr>
+            <th>Status</th>
+            <th>Nome</th>
+            <th>Documento</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>FUNÇÕES ADMINISTRATIVAS</th>
+            <!-- <th></th> -->
+        </tr>
+    </thead>
+    <tbody *ngFor="let pessoa of pessoas">
+       <tr>
+           <td>
+            <div *ngIf="pessoa.statusCadastro == true; else inativo">
+                <img class="status-img" src="assets/imagens/ativo.png" alt="Ativo">
+            </div>
+            <ng-template #inativo>
+                <img class="status-img" src="assets/imagens/inativo.png" alt="Inativo">
+            </ng-template>
+            </td>
+           <td>{{pessoa.nome}}</td>    
+           <td>{{pessoa.documento}}</td>
+           <td>{{pessoa.email}}</td>
+           <td>{{pessoa.telefone}}</td>
+           <td>{{pessoa.endereco}}</td>
+           <td>
+                <button>Alterar</button>
+                <button>Detalhar</button>
+                <button>Excluir</button>
+           </td>
+           <!-- <td><button>Excluir</button></td> -->
+       </tr> 
+    </tbody>
+</table>

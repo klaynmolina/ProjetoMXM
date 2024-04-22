@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAPI_CadastroPessoa_MXM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0c8e777b46edc9b82a8728d7a4b0d99f6b83bff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d54cb199ac5a964e4e40b886192818c94bb49fb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAPI_CadastroPessoa_MXM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAPI_CadastroPessoa_MXM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

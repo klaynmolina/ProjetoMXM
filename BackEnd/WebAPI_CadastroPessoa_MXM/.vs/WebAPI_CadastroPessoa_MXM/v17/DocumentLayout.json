@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|c:\\vscodeworkspace\\projetomxm\\backend\\webapi_cadastropessoa_mxm\\webapi_cadastropessoa_mxm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|solutionrelative:webapi_cadastropessoa_mxm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|c:\\vscodeworkspace\\projetomxm\\backend\\webapi_cadastropessoa_mxm\\webapi_cadastropessoa_mxm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|solutionrelative:webapi_cadastropessoa_mxm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|c:\\vscodeworkspace\\projetomxm\\backend\\webapi_cadastropessoa_mxm\\webapi_cadastropessoa_mxm\\service\\pessoaservice\\ipessoainterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|solutionrelative:webapi_cadastropessoa_mxm\\service\\pessoaservice\\ipessoainterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|c:\\vscodeworkspace\\projetomxm\\backend\\webapi_cadastropessoa_mxm\\webapi_cadastropessoa_mxm\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C762D74-0C59-4993-B620-FE299F9984AC}|WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM.csproj|solutionrelative:webapi_cadastropessoa_mxm\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,35 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 268,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PessoaController.cs",
-              "DocumentMoniker": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
-              "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
-              "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
-              "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T19:43:10.396Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IPessoaInterface.cs",
-              "DocumentMoniker": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\IPessoaInterface.cs",
-              "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\IPessoaInterface.cs",
-              "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\IPessoaInterface.cs",
-              "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\IPessoaInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T19:50:11.271Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -64,27 +28,10 @@
               "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\Program.cs",
               "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\Program.cs",
               "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:56:07.071Z",
+              "WhenOpened": "2024-04-22T20:12:52.645Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\appsettings.json",
-              "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\appsettings.json",
-              "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM\\appsettings.json",
-              "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAClAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-18T23:54:16.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

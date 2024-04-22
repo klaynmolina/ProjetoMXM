@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BackEnd",
+    "\\BackEnd\\WebAPI_CadastroPessoa_MXM",
+    "\\BackEnd\\WebAPI_CadastroPessoa_MXM\\WebAPI_CadastroPessoa_MXM",
+    "\\FrontEnd",
+    "\\FrontEnd\\FrontEnd_CadastroPessoa_MXM"
   ],
+  "SelectedNode": "\\.github",
   "PreviewInSolutionExplorer": false
 }

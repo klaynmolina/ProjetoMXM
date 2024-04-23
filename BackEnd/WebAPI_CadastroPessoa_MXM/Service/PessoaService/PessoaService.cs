@@ -23,7 +23,7 @@ namespace WebAPI_CadastroPessoa_MXM.Service.PessoaService
                _context.Add(novaPessoa);
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = novaPessoa;
-                serviceResponse.Mensagem = novaPessoa.Nome + " adicionado (a) com sucesso.";
+                serviceResponse.Mensagem = novaPessoa.Nome + " cadastrado(a) com sucesso.";
             }
             catch (Exception ex)
             {

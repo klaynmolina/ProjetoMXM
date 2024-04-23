@@ -21,7 +21,7 @@ buscar(event: Event) {
   ngOnInit(): void {
     this.pessoaService.GetPessoas().subscribe(
       (info) => {
-        console.log(info.dados);
+        // console.log(info.dados);
         const dadosRecebidos = info.dados;
         dadosRecebidos.map((i) => {
           i.dataCriacao = new Date(i.dataCriacao!).toLocaleDateString('pt-BR');

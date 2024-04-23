@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pessoa } from 'src/app/Models/Pessoa';
 import { PessoaService } from 'src/app/Services/pessoa.service';
+import { FormularioComponent } from 'src/app/Components/formulario/formulario.component';
 
 @Component({
-  selector: 'app-alteracao',
-  templateUrl: './alteracao.component.html',
-  styleUrls: ['./alteracao.component.css']
+  selector: 'app-atualizar',
+  templateUrl: './atualizar.component.html',
+  styleUrls: ['./atualizar.component.css']
 })
-export class AlteracaoComponent implements OnInit {
+export class AtualizarComponent implements OnInit {
   public btnFuncao = "Atualizar Cadastro";
-  public btnTitulo = "Formulário para Alteração de Cadastro";
+  public btnTitulo = "Formulário para Atualização de Cadastro";
   pessoa!: Pessoa;
 
   constructor(private pessoaService: PessoaService, private route: ActivatedRoute, private router: Router) { }

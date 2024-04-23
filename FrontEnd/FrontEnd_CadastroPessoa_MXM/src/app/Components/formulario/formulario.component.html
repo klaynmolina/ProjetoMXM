@@ -1,0 +1,26 @@
+<form [formGroup]="formularioCadastro" (ngSubmit)="cadastrar()">
+    <div class="formulario-cadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" formControlName="nome" placeholder="Nome completo" required>
+    </div>
+    <div class="formulario-cadastro">
+        <label for="nome">Documento:</label>
+        <input type="text" formControlName="documento" placeholder="CPF/CNPJ" required>
+    </div>
+    <div class="formulario-cadastro">
+        <label for="nome">E-mail:</label>
+        <input type="text" formControlName="email" placeholder="exemplo@email.com" required>
+    </div>
+    <div class="formulario-cadastro">
+        <label for="nome">Telefone:</label>
+        <input type="text" formControlName="telefone" placeholder="(xx) 12345-6789" required>
+    </div>
+    <div class="formulario-cadastro">
+        <label for="nome">Endereço:</label>
+        <input type="text" formControlName="endereco" placeholder="Endereço completo" required>
+    </div>
+    <div class="btn-cadastrar">
+        <button type="submit">Cadastrar</button>
+        <button routerLink="/home">Página Inicial</button>
+    </div>
+</form>

@@ -24,7 +24,7 @@ export class PessoaService {
   }
 
   GetPessoaById(id: number) : Observable<Response<Pessoa>> {
-    return this.http.get<Response<Pessoa>>(this.urlAPI+"/localizarCadastro");
+    return this.http.get<Response<Pessoa>>(this.urlAPI+"/localizarCadastro/"+`${id}`);
   }
 
   UpdatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {

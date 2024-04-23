@@ -18,7 +18,7 @@ namespace WebAPI_CadastroPessoa_MXM.Controllers
             return Ok(await _pessoaInterface.GetPessoas());
         }
 
-        [HttpGet(("localizarCadastro"))]
+        [HttpGet(("localizarCadastro/{id}"))]
         public async Task<ActionResult<ServiceResponse<PessoaModel>>> GetPessoaById(int id)
         {
             ServiceResponse<PessoaModel> serviceResponse = await _pessoaInterface.GetPessoaById(id);

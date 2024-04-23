@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\PessoaService.cs",
               "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\PessoaService.cs",
               "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\Service\\PessoaService\\PessoaService.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAkwE0AAAA+AAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwDwAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T19:40:48.612Z",
               "EditorCaption": ""
@@ -49,9 +49,10 @@
               "RelativeDocumentMoniker": "WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
               "ToolTip": "C:\\VsCodeWorkspace\\ProjetoMXM\\BackEnd\\WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
               "RelativeToolTip": "WebAPI_CadastroPessoa_MXM\\Controllers\\PessoaController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAABQAAAApAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAiwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:05:54.647Z"
+              "WhenOpened": "2024-04-23T19:05:54.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

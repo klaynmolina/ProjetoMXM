@@ -32,6 +32,6 @@ export class PessoaService {
   }
 
   DisablePessoa(id: number) : Observable<Response<Pessoa>> {
-    return this.http.put<Response<Pessoa>>(this.urlAPI+"/desativarCadastro", id);    
+    return this.http.put<Response<Pessoa>>(this.urlAPI+"/desativarCadastro/"+`${id}`, id);    
   }
 }

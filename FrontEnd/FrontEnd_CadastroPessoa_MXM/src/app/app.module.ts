@@ -8,13 +8,15 @@ import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { FormularioComponent } from './Components/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlteracaoComponent } from './Pages/alteracao/alteracao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CadastroComponent,
-    FormularioComponent
+    FormularioComponent,
+    AlteracaoComponent
   ],
   imports: [
     BrowserModule,

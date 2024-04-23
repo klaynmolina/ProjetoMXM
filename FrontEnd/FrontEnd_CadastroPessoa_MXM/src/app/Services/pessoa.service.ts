@@ -22,4 +22,12 @@ export class PessoaService {
   CreatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {
     return this.http.post<Response<Pessoa>>(this.urlAPI+"/criarCadastro", pessoa);
   }
+
+  GetPessoaById(id: number) : Observable<Response<Pessoa>> {
+    return this.http.get<Response<Pessoa>>(this.urlAPI+"/localizarCadastro");
+  }
+
+  UpdatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {
+    return this.http.post<Response<Pessoa>>(this.urlAPI+"/criarCadastro", pessoa);
+  }
 }

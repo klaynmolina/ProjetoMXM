@@ -12,6 +12,7 @@ export class FormularioComponent implements OnInit {
   @Output() onSubmit = new EventEmitter<Pessoa>();
   @Input() btnFuncao!: string;
   @Input() btnTitulo!: string;
+  @Input() dadosPessoa: Pessoa | null = null;
 
   formularioCadastro!: FormGroup;
 

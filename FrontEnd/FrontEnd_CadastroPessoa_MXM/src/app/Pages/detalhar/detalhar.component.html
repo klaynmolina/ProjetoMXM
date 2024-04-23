@@ -1,0 +1,44 @@
+<div>
+    <h1>Detalhes do Cadastro</h1>
+</div>
+<div *ngIf="pessoa">
+    <form>
+        <div class="formulario">
+            <label>Nome:</label>
+            <input type="text" value="{{pessoa.nome}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Documento:</label>
+            <input type="text" value="{{pessoa.documento}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>E-mail:</label>
+            <input type="text" value="{{pessoa.email}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Telefone:</label>
+            <input type="text" value="{{pessoa.telefone}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Endereço:</label>
+            <input type="text" value="{{pessoa.endereco}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Status do Cadastro:</label>
+            <input type="text" value="{{pessoa.statusCadastro == true ? 'Ativo' : 'Inativo'}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Data de Criação:</label>
+            <input type="text" value="{{pessoa.dataCriacao}}" disabled>
+        </div>
+        <div class="formulario">
+            <label>Data de Alteração:</label>
+            <input type="text" value="{{pessoa.dataAlteracao}}" disabled>
+        </div>
+        <div class="btns">
+            <button (click)="desativarCadastro()">Desativar Cadastro</button>
+            <button routerLink="/atualizar/{{pessoa.id}}">Atualizar Cadastro</button>
+            <button routerLink="/home">Página Inicial</button>
+        </div>
+    </form>
+</div>

@@ -1,3 +1,8 @@
-<div>
-    <app-formulario [btnFuncao]="btnFuncao" [btnTitulo]="btnTitulo" [dadosPessoa]="pessoa" (onSubmit)="alterarPessoa($event)"></app-formulario>
+<div *ngIf="pessoa">
+    <app-formulario 
+        [btnFuncao]="btnFuncao" 
+        [btnTitulo]="btnTitulo" 
+        [dadosPessoa]="pessoa" 
+        (onSubmit)="atualizarCadastro($event)">
+    </app-formulario>
 </div>

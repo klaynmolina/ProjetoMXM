@@ -13,8 +13,8 @@ export class CadastroComponent {
   public btnTitulo = "Formulário para Novo Cadastro";
   constructor(private pessoaService: PessoaService, private router: Router) { }
   cadastrarPessoa(pessoa: Pessoa) {
-    this.pessoaService.CreatePessoa(pessoa).subscribe(() => {
-      alert("Cadastrado realizado com Sucesso!");
+    this.pessoaService.CreatePessoa(pessoa).subscribe((info) => {
+      alert(info.mensagem);
       this.router.navigate(['/home']);
     })    
   }

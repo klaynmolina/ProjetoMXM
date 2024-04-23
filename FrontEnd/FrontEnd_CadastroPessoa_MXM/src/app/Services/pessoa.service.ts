@@ -28,6 +28,6 @@ export class PessoaService {
   }
 
   UpdatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {
-    return this.http.post<Response<Pessoa>>(this.urlAPI+"/criarCadastro", pessoa);
+    return this.http.put<Response<Pessoa>>(this.urlAPI+"/atualizarCadastro", pessoa);
   }
 }

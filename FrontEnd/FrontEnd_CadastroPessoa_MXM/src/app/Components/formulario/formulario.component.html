@@ -1,5 +1,7 @@
 <h1>{{btnTitulo}}</h1>
-<form [formGroup]="formularioCadastro" (ngSubmit)="cadastrar()">
+<form [formGroup]="formularioDados" (ngSubmit)="cadastrar()">
+    <input type="hidden" formControlName="id">
+    
     <div class="formulario-cadastro">
         <label for="nome">Nome:</label>
         <input type="text" formControlName="nome" placeholder="Nome completo" required>
@@ -21,7 +23,7 @@
         <input type="text" formControlName="endereco" placeholder="Endereço completo" required>
     </div>
     <div class="btn-cadastrar">
-        <button type="submit" [disabled]="!formularioCadastro.valid">{{btnFuncao}}</button>
+        <button type="submit" [disabled]="!formularioDados.valid">{{btnFuncao}}</button>
         <button routerLink="/home">Página Inicial</button>
     </div>
 </form>

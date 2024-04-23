@@ -14,26 +14,27 @@ export class FormularioComponent implements OnInit {
   @Input() btnTitulo!: string;
   @Input() dadosPessoa: Pessoa | null = null;
 
-  formularioCadastro!: FormGroup;
+  formularioDados!: FormGroup;
 
   constructor() { }
   ngOnInit(): void {
-    this.formularioCadastro = new FormGroup({
-      id: new FormControl(0),
-      nome: new FormControl('', [Validators.required]),
-      documento: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
-      telefone: new FormControl('', [Validators.required]),
-      endereco: new FormControl('', [Validators.required]),
-      statusCadastro: new FormControl(true),
+    console.log(this.dadosPessoa);
+    this.formularioDados = new FormGroup({
+      id: new FormControl(this.dadosPessoa ? this.dadosPessoa.id : 0),
+      nome: new FormControl(this.dadosPessoa ? this.dadosPessoa.nome : '', [Validators.required]),
+      documento: new FormControl(this.dadosPessoa ? this.dadosPessoa.documento : '', [Validators.required]),
+      email: new FormControl(this.dadosPessoa ? this.dadosPessoa.email : '', [Validators.required]),
+      telefone: new FormControl(this.dadosPessoa ? this.dadosPessoa.telefone : '', [Validators.required]),
+      endereco: new FormControl(this.dadosPessoa ? this.dadosPessoa.endereco : '', [Validators.required]),
+      statusCadastro: new FormControl(this.dadosPessoa ? this.dadosPessoa.statusCadastro : true),
       dataCriacao: new FormControl(new Date()),
       dataAlteracao: new FormControl(new Date()),
     });
   }
 
   cadastrar() {
-    console.log(this.formularioCadastro.value);    
-    this.onSubmit.emit(this.formularioCadastro.value);
+    console.log(this.formularioDados .value);    
+    this.onSubmit.emit(this.formularioDados.value);
   }
 
 }

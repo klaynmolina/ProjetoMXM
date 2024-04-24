@@ -13,7 +13,7 @@
         <div class="formulario">
             <mat-form-field>
                 <mat-label for="nome">Documento:</mat-label>
-                <input matInput type="text" formControlName="documento" placeholder="CPF/CNPJ" required>
+                <input matInput type="text" formControlName="documento" placeholder="CPF/CNPJ" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
             </mat-form-field>
         </div>
 
@@ -27,7 +27,7 @@
         <div class="formulario">
             <mat-form-field>
                 <mat-label for="nome">Telefone:</mat-label>
-                <input matInput type="text" formControlName="telefone" placeholder="00123456789" required>
+                <input matInput type="text" formControlName="telefone" placeholder="00123456789" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
             </mat-form-field>
         </div>
 

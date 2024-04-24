@@ -22,6 +22,7 @@ import { ExcluirComponent } from './Components/excluir/excluir.component';
 import { CadastrarComponent } from './Components/cadastrar/cadastrar.component';
 import { AtualizarModalComponent } from './Components/atualizar-modal/atualizar-modal.component';
 import { DesativarModalComponent } from './Components/desativar-modal/desativar-modal.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,10 @@ import { DesativarModalComponent } from './Components/desativar-modal/desativar-
     ExcluirComponent,
     CadastrarComponent,
     AtualizarModalComponent,
-    DesativarModalComponent
+    DesativarModalComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -47,7 +49,7 @@ import { DesativarModalComponent } from './Components/desativar-modal/desativar-
     MatCardModule,
     MatInputModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

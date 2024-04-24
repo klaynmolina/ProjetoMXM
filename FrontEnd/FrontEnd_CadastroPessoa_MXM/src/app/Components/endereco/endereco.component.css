@@ -1,0 +1,11 @@
+.endereco-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.endereco-btns button {
+    margin-right: 20px;
+
+}

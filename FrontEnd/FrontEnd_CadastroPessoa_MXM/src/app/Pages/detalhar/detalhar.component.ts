@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AtivarModalComponent } from 'src/app/Components/ativar-modal/ativar-modal.component';
 import { DesativarModalComponent } from 'src/app/Components/desativar-modal/desativar-modal.component';
 import { Pessoa } from 'src/app/Models/Pessoa';
 import { PessoaService } from 'src/app/Services/pessoa.service';
@@ -37,11 +38,23 @@ export class DetalharComponent implements OnInit {
       width: '450px',
     });
   }  
+  AtivarDialog() {
+    this.dialog.open(AtivarModalComponent, {
+      width: '450px',
+    });
+  }  
 
   desativarCadastro() {
     this.pessoaService.DisablePessoa(this.id).subscribe((info) => {
       // alert(info.mensagem);
       // this.router.navigate(['/home']);
       this.DesativarDialog();
+    })}
+
+  ativarCadastro() {
+    this.pessoaService.EnablePessoa(this.id).subscribe((info) => {
+      // alert(info.mensagem);
+      // this.router.navigate(['/home']);
+      this.AtivarDialog();
     })}
 }

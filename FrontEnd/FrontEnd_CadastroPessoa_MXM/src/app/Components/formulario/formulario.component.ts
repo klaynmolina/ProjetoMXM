@@ -7,6 +7,7 @@ import { Pessoa } from 'src/app/Models/Pessoa';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
+
 export class FormularioComponent implements OnInit {
 
   @Output() onSubmit = new EventEmitter<Pessoa>();
@@ -35,6 +36,10 @@ export class FormularioComponent implements OnInit {
   cadastrar() {
     console.log(this.formularioDados .value);    
     this.onSubmit.emit(this.formularioDados.value);
+  }
+
+  aplicarMascara(event: Event) {
+    
   }
 
 }

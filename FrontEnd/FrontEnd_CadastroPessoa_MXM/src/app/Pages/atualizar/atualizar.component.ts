@@ -31,7 +31,7 @@ export class AtualizarComponent implements OnInit {
   }
   AtualizarDialog() {
     this.dialog.open(AtualizarModalComponent, {
-      width: '450px',
+      width: '400px',
     });
   }
   atualizarCadastro(pessoa: Pessoa) {

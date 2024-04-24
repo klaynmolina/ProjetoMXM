@@ -45,11 +45,29 @@ ExcluirDialog(id: number) {
         dadosRecebidos.map((i) => {
           i.dataCriacao = new Date(i.dataCriacao!).toLocaleDateString('pt-BR');
           i.dataAlteracao = new Date(i.dataAlteracao!).toLocaleDateString('pt-BR');
+          
+          // Aplicação Máscara CPF/CNPJ
+          if(i.documento.length <= 11) {
+            i.documento = this.formatCpf(i.documento);
+          } else {
+            i.documento = this.formatCnpj(i.documento);
+          }
+
         })
         this.pessoas = info.dados;
         this.buscarPessoas = info.dados;
       }
     )
+  }
+
+  // Máscara CPF
+  private formatCpf(value: string): string {
+    return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+  }
+
+  // Máscara CNPJ
+  private formatCnpj(value: string): string {
+    return value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
   }
 
 }

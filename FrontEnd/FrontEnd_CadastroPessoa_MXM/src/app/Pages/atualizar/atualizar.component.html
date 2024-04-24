@@ -1,8 +1,9 @@
 <div *ngIf="pessoa">
     <app-formulario 
-        [btnFuncao]="btnFuncao" 
-        [btnTitulo]="btnTitulo" 
-        [dadosPessoa]="pessoa" 
-        (onSubmit)="atualizarCadastro($event)">
+    [btnFuncao]="btnFuncao" 
+    [btnTitulo]="btnTitulo" 
+    [dadosPessoa]="pessoa" 
+    (onSubmit)="atualizarCadastro($event)">
     </app-formulario>
+    <button routerLink="/detalhar/{{pessoa.id}}" mat-stroked-button color="accent" class="configurar-cadastro-btn">Configurar Cadastro</button>
 </div>

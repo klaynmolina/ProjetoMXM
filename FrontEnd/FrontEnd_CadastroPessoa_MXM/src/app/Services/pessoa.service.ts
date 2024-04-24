@@ -35,11 +35,12 @@ export class PessoaService {
     return this.http.put<Response<Pessoa>>(this.urlAPI+"/desativarCadastro/"+`${id}`, id);    
   }
 
+  EnablePessoa(id: number) : Observable<Response<Pessoa>> {
+    return this.http.put<Response<Pessoa>>(this.urlAPI+"/ativarCadastro/"+`${id}`, id);
+  }
+  
   DeletePessoa(id: number) : Observable<Response<Pessoa>> {
     return this.http.delete<Response<Pessoa>>(this.urlAPI+"/deletarCadastro/"+`?id=${id}`);	
   }
 
-  // EnablePessoa(id: number) : Observable<Response<Pessoa>> {
-  //   return this.http.put<Response<Pessoa>>(this.urlAPI+"/ativarCadastro/"+`${id}`, id);
-  // }
 }

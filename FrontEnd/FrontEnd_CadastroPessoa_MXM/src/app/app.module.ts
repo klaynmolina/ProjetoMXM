@@ -23,6 +23,7 @@ import { CadastrarComponent } from './Components/cadastrar/cadastrar.component';
 import { AtualizarModalComponent } from './Components/atualizar-modal/atualizar-modal.component';
 import { DesativarModalComponent } from './Components/desativar-modal/desativar-modal.component';
 import { CommonModule } from '@angular/common';
+import { AtivarModalComponent } from './Components/ativar-modal/ativar-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CommonModule } from '@angular/common';
     CadastrarComponent,
     AtualizarModalComponent,
     DesativarModalComponent,
+    AtivarModalComponent,
   ],
   imports: [
     CommonModule,

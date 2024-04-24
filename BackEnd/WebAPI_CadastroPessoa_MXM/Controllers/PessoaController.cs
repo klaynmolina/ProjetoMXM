@@ -38,7 +38,7 @@ namespace WebAPI_CadastroPessoa_MXM.Controllers
             return Ok(serviceResponse);
         }
 
-        [HttpPut("ativarCadastro")]
+        [HttpPut("ativarCadastro/{id}")]
         public async Task<ActionResult<ServiceResponse<PessoaModel>>> EnablePessoa(int id)
         {
             ServiceResponse<PessoaModel> serviceResponse = await _pessoaInterface.EnablePessoa(id);

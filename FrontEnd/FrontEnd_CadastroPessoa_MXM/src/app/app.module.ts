@@ -19,6 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ExcluirComponent } from './Components/excluir/excluir.component';
+import { CadastrarComponent } from './Components/cadastrar/cadastrar.component';
+import { AtualizarModalComponent } from './Components/atualizar-modal/atualizar-modal.component';
+import { DesativarModalComponent } from './Components/desativar-modal/desativar-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ExcluirComponent } from './Components/excluir/excluir.component';
     FormularioComponent,
     AtualizarComponent,
     DetalharComponent,
-    ExcluirComponent
+    ExcluirComponent,
+    CadastrarComponent,
+    AtualizarModalComponent,
+    DesativarModalComponent
   ],
   imports: [
     BrowserModule,

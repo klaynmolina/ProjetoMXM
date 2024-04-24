@@ -23,7 +23,7 @@ namespace WebAPI_CadastroPessoa_MXM.Service.PessoaService
                _context.Add(novaPessoa);
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = novaPessoa;
-                serviceResponse.Mensagem = novaPessoa.Nome + " adicionado (a) com sucesso.";
+                serviceResponse.Mensagem = novaPessoa.Nome + " cadastrado(a) com sucesso.";
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace WebAPI_CadastroPessoa_MXM.Service.PessoaService
                 _context.Pessoas.Update(pessoa);
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = pessoa;
-                serviceResponse.Mensagem = "Cadastro inativado com sucesso.";
+                serviceResponse.Mensagem = "Cadastro desativado com sucesso.";
             }
             catch (Exception ex)
             {

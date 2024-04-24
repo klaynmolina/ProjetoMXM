@@ -1,0 +1,13 @@
+<mat-card>
+    <div *ngIf="pessoa">
+        <h1>Confirmar Exclusão do Cadastro?</h1>
+        <h3 style="font-weight: bold;">Nome:</h3>
+        <h3>{{pessoa.nome}}</h3>
+        <h3 style="font-weight: bold;">Documento:</h3>
+        <h3>{{pessoa.documento}}</h3>
+        <div class="excluir-modal-btns">
+            <button (click)="Excluir()" mat-raised-button color="warn">Confirmar Exclusão</button>
+            <button (click)="Cancelar()" mat-raised-button color="primary">Cancelar</button>
+        </div>
+    </div>
+</mat-card>

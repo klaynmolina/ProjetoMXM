@@ -10,7 +10,6 @@ import { Response } from '../Models/Response';
   providedIn: 'root'
 })
 export class PessoaService {
-
   private urlAPIDevelopment = `${environmentDevelopment.API_URL}/Pessoa`
   private urlAPI = `${environment.API_URL}/Pessoa`
 
@@ -19,4 +18,28 @@ export class PessoaService {
   GetPessoas() : Observable<Response<Pessoa[]>> {
     return this.http.get<Response<Pessoa[]>>(this.urlAPI+"/listarTodos");
   }
+
+  CreatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {
+    return this.http.post<Response<Pessoa>>(this.urlAPI+"/criarCadastro", pessoa);
+  }
+
+  GetPessoaById(id: number) : Observable<Response<Pessoa>> {
+    return this.http.get<Response<Pessoa>>(this.urlAPI+"/localizarCadastro/"+`${id}`);
+  }
+
+  UpdatePessoa(pessoa: Pessoa) : Observable<Response<Pessoa>> {
+    return this.http.put<Response<Pessoa>>(this.urlAPI+"/atualizarCadastro", pessoa);
+  }
+
+  DisablePessoa(id: number) : Observable<Response<Pessoa>> {
+    return this.http.put<Response<Pessoa>>(this.urlAPI+"/desativarCadastro/"+`${id}`, id);    
+  }
+
+  DeletePessoa(id: number) : Observable<Response<Pessoa>> {
+    return this.http.delete<Response<Pessoa>>(this.urlAPI+"/deletarCadastro/"+`?id=${id}`);	
+  }
+
+  // EnablePessoa(id: number) : Observable<Response<Pessoa>> {
+  //   return this.http.put<Response<Pessoa>>(this.urlAPI+"/ativarCadastro/"+`${id}`, id);
+  // }
 }

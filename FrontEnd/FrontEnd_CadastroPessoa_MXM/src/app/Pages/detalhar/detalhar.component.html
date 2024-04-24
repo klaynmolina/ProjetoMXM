@@ -1,0 +1,70 @@
+<mat-card>
+    <div>
+        <h1>Detalhes do Cadastro</h1>
+    </div>
+    <div *ngIf="pessoa">
+        <form>
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Nome:</mat-label>
+                    <input matInput type="text" value="{{pessoa.nome}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Documento:</mat-label>
+                    <input matInput type="text" value="{{pessoa.documento}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>E-mail:</mat-label>
+                    <input matInput type="text" value="{{pessoa.email}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Telefone:</mat-label>
+                    <input matInput type="text" value="{{pessoa.telefone}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Endereço:</mat-label>
+                    <input matInput type="text" value="{{pessoa.endereco}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Status do Cadastro:</mat-label>
+                    <input matInput type="text" value="{{pessoa.statusCadastro == true ? 'Ativo' : 'Inativo'}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Data de Criação:</mat-label>
+                    <input matInput type="text" value="{{pessoa.dataCriacao}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="formulario">
+                <mat-form-field>
+                    <mat-label>Data de Alteração:</mat-label>
+                    <input matInput type="text" value="{{pessoa.dataAlteracao}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="btns">
+                <button (click)="desativarCadastro()" mat-raised-button color="warn">Desativar Cadastro</button>
+                <button routerLink="/atualizar/{{pessoa.id}}" mat-raised-button color="primary">Atualizar Cadastro</button>
+                <button routerLink="/home" mat-stroked-button color="primary" class="home-page-btn">Página Inicial</button>
+            </div>
+        </form>
+    </div>
+</mat-card>

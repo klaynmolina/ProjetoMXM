@@ -1,45 +1,60 @@
-<div class="formulario">
-    <button routerLink="/cadastro">Cadastrar</button>
-    <div class="pesquisa">
-        <label>Pesquisar:</label>
-        <input type="text" placeholder="Pesquisar" (input)="buscar($event)">
+<mat-card>
+    <div class="home-top">
+        <button routerLink="/cadastro" mat-raised-button color="primary">Cadastrar</button>
+        <h1>DESAFIO CADASTRO DE PESSOA - MXM</h1>
+        <div class="pesquisa">
+            <mat-form-field class="pesquisar">
+                <mat-label>Pesquisar:</mat-label>
+                <input matInput type="text" (input)="buscar($event)">
+            </mat-form-field>
+            
+        </div>
     </div>
-</div>
-
-<table class="tabela">
-    <thead>
-        <tr>
-            <th>Status</th>
-            <th>Nome</th>
-            <th>Documento</th>
-            <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Endereço</th>
-            <th>FUNÇÕES ADMINISTRATIVAS</th>
-            <!-- <th></th> -->
-        </tr>
-    </thead>
-    <tbody *ngFor="let pessoa of pessoas">
-       <tr>
-           <td>
-            <div *ngIf="pessoa.statusCadastro == true; else inativo">
-                <img class="status-img" src="assets/imagens/ativo.png" alt="Ativo">
-            </div>
-            <ng-template #inativo>
-                <img class="status-img" src="assets/imagens/inativo.png" alt="Inativo">
-            </ng-template>
+    
+    <table mat-table [dataSource]="pessoas" class="mat-elevation-z8">
+        <ng-container matColumnDef="Status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let pessoa">
+                <div *ngIf="pessoa.statusCadastro == true; else inativo">
+                    <img class="status-img" src="assets/imagens/ativo.png" alt="Ativo">
+                </div>
+                <ng-template #inativo>
+                    <img class="status-img" src="assets/imagens/inativo.png" alt="Inativo">
+                </ng-template>
             </td>
-           <td>{{pessoa.nome}}</td>    
-           <td>{{pessoa.documento}}</td>
-           <td>{{pessoa.email}}</td>
-           <td>{{pessoa.telefone}}</td>
-           <td>{{pessoa.endereco}}</td>
-           <td>
-                <button>Alterar</button>
-                <button>Detalhar</button>
-                <button>Excluir</button>
-           </td>
-           <!-- <td><button>Excluir</button></td> -->
-       </tr> 
-    </tbody>
-</table>
+        </ng-container>
+        
+        <ng-container matColumnDef="Nome">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let pessoa"> {{pessoa.nome}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="Documento">
+          <th mat-header-cell *matHeaderCellDef> Documento </th>
+          <td mat-cell *matCellDef="let pessoa"> {{pessoa.documento}} </td>
+        </ng-container>
+        <ng-container matColumnDef="E-mail">
+          <th mat-header-cell *matHeaderCellDef> E-mail </th>
+          <td mat-cell *matCellDef="let pessoa"> {{pessoa.email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Telefone">
+          <th mat-header-cell *matHeaderCellDef> Telefone </th>
+          <td mat-cell *matCellDef="let pessoa"> {{pessoa.telefone}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Endereço">
+          <th mat-header-cell *matHeaderCellDef> Endereço </th>
+          <td mat-cell *matCellDef="let pessoa"> {{pessoa.endereco}} </td>
+        </ng-container>
+        <ng-container matColumnDef="FUNÇÕES ADMINISTRATIVAS" >
+          <th mat-header-cell *matHeaderCellDef class="funcoes-administrativas"> FUNÇÕES ADMINISTRATIVAS </th>
+            <td mat-cell *matCellDef="let pessoa">
+                <button routerLink="/atualizar/{{pessoa.id}}" mat-stroked-button color="primary" class="home-page-btn espacar-btn">Atualizar</button>
+                <button routerLink="/detalhar/{{pessoa.id}}" mat-stroked-button color="primary" class="home-page-btn espacar-btn">Detalhar</button>
+                <button mat-flat-button color="warn" (click)="ExcluirDialog(pessoa.id)">Excluir</button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+    </table>
+</mat-card>

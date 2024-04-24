@@ -18,7 +18,7 @@ namespace WebAPI_CadastroPessoa_MXM.Controllers
             return Ok(await _pessoaInterface.GetPessoas());
         }
 
-        [HttpGet(("localizarCadastro"))]
+        [HttpGet(("localizarCadastro/{id}"))]
         public async Task<ActionResult<ServiceResponse<PessoaModel>>> GetPessoaById(int id)
         {
             ServiceResponse<PessoaModel> serviceResponse = await _pessoaInterface.GetPessoaById(id);
@@ -31,7 +31,7 @@ namespace WebAPI_CadastroPessoa_MXM.Controllers
             return Ok(await _pessoaInterface.CreatePessoa(novaPessoa));
         }
 
-        [HttpPut("desativarCadastro")]
+        [HttpPut("desativarCadastro/{id}")]
         public async Task<ActionResult<ServiceResponse<PessoaModel>>> DisablePessoa(int id)
         {
             ServiceResponse<PessoaModel> serviceResponse = await _pessoaInterface.DisablePessoa(id);

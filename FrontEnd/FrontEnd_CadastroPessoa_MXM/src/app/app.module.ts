@@ -24,6 +24,7 @@ import { AtualizarModalComponent } from './Components/atualizar-modal/atualizar-
 import { DesativarModalComponent } from './Components/desativar-modal/desativar-modal.component';
 import { CommonModule } from '@angular/common';
 import { AtivarModalComponent } from './Components/ativar-modal/ativar-modal.component';
+import { EnderecoComponent } from './Components/endereco/endereco.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AtivarModalComponent } from './Components/ativar-modal/ativar-modal.com
     AtualizarModalComponent,
     DesativarModalComponent,
     AtivarModalComponent,
+    EnderecoComponent,
   ],
   imports: [
     CommonModule,

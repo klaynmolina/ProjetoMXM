@@ -2,3 +2,9 @@
     width: 25px;
     height: 25px;
 }
+
+
+mat-card {
+    background-color: var(--light-background-purple);
+    min-width: 1000px;
+}

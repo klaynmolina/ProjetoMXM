@@ -18,7 +18,7 @@ export class FormularioComponent implements OnInit {
 
   constructor() { }
   ngOnInit(): void {
-    console.log(this.dadosPessoa);
+    // console.log(this.dadosPessoa);
     this.formularioDados = new FormGroup({
       id: new FormControl(this.dadosPessoa ? this.dadosPessoa.id : 0),
       nome: new FormControl(this.dadosPessoa ? this.dadosPessoa.nome : '', [Validators.required]),

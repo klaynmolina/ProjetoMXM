@@ -11,7 +11,7 @@ import { FormularioComponent } from 'src/app/Components/formulario/formulario.co
 })
 export class AtualizarComponent implements OnInit {
   public btnFuncao = "Atualizar Cadastro";
-  public btnTitulo = "Formulário para Atualização de Cadastro";
+  public btnTitulo = "Atualização de Cadastro";
   pessoa!: Pessoa;
 
   constructor(private pessoaService: PessoaService, private route: ActivatedRoute, private router: Router) { }

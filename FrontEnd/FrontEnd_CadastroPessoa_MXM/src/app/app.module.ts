@@ -12,6 +12,12 @@ import { AtualizarComponent } from './Pages/atualizar/atualizar.component';
 import { DetalharComponent } from './Pages/detalhar/detalhar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Componentes Angular Material
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +33,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

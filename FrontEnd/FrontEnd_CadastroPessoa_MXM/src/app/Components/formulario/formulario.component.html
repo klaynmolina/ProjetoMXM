@@ -1,29 +1,47 @@
-<h1>{{btnTitulo}}</h1>
-<form [formGroup]="formularioDados" (ngSubmit)="cadastrar()">
-    <input type="hidden" formControlName="id">
-    
-    <div class="formulario">
-        <label for="nome">Nome:</label>
-        <input type="text" formControlName="nome" placeholder="Nome completo" required>
-    </div>
-    <div class="formulario">
-        <label for="nome">Documento:</label>
-        <input type="text" formControlName="documento" placeholder="CPF/CNPJ" required>
-    </div>
-    <div class="formulario">
-        <label for="nome">E-mail:</label>
-        <input type="text" formControlName="email" placeholder="exemplo@email.com" required>
-    </div>
-    <div class="formulario">
-        <label for="nome">Telefone:</label>
-        <input type="text" formControlName="telefone" placeholder="(xx) 12345-6789" required>
-    </div>
-    <div class="formulario">
-        <label for="nome">Endereço:</label>
-        <input type="text" formControlName="endereco" placeholder="Endereço completo" required>
-    </div>
-    <div class="btn-cadastrar">
-        <button type="submit" [disabled]="!formularioDados.valid">{{btnFuncao}}</button>
-        <button routerLink="/home">Página Inicial</button>
-    </div>
-</form>
+<mat-card>
+    <h1>{{btnTitulo}}</h1>
+    <form [formGroup]="formularioDados" (ngSubmit)="cadastrar()">
+        <input type="hidden" formControlName="id">
+        
+        <div class="formulario">
+            <mat-form-field>
+                <mat-label for="nome">Nome:</mat-label>
+                <input matInput type="text" formControlName="nome" placeholder="Nome completo" required>
+            </mat-form-field>
+        </div>
+
+        <div class="formulario">
+            <mat-form-field>
+                <mat-label for="nome">Documento:</mat-label>
+                <input matInput type="text" formControlName="documento" placeholder="CPF/CNPJ" required>
+            </mat-form-field>
+        </div>
+
+        <div class="formulario">
+            <mat-form-field>
+                <mat-label for="nome">E-mail:</mat-label>
+                <input matInput type="text" formControlName="email" placeholder="exemplo@email.com" required>
+            </mat-form-field>
+        </div>
+
+        <div class="formulario">
+            <mat-form-field>
+                <mat-label for="nome">Telefone:</mat-label>
+                <input matInput type="text" formControlName="telefone" placeholder="00123456789" required>
+            </mat-form-field>
+        </div>
+
+        <div class="formulario">
+            <mat-form-field>
+                <mat-label for="nome">Endereço:</mat-label>
+                <input matInput type="text" formControlName="endereco" placeholder="Endereço completo" required>
+            </mat-form-field>
+        </div>
+
+        <div class="btns">
+            <button type="submit" [disabled]="!formularioDados.valid" mat-raised-button color="primary">{{btnFuncao}}</button>
+            <button routerLink="/home" mat-stroked-button color="primary" class="home-page-btn">Página Inicial</button>
+        </div>
+        
+    </form>
+</mat-card>

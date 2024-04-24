@@ -16,6 +16,15 @@ buscar(event: Event) {
 
   public pessoas: Pessoa[] = [];
   public buscarPessoas: Pessoa[] = [];
+  colunas = [
+    'Status',
+    'Nome',
+    'Documento',
+    'E-mail',
+    'Telefone',
+    'Endereço',
+    'FUNÇÕES ADMINISTRATIVAS'
+  ]
 
   constructor (private pessoaService: PessoaService) { }
   ngOnInit(): void {

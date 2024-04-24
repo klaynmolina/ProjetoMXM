@@ -10,7 +10,7 @@ import { PessoaService } from 'src/app/Services/pessoa.service';
 })
 export class CadastroComponent {
   public btnFuncao = "Cadastrar";
-  public btnTitulo = "Formulário para Novo Cadastro";
+  public btnTitulo = "Novo Cadastro";
   constructor(private pessoaService: PessoaService, private router: Router) { }
   cadastrarPessoa(pessoa: Pessoa) {
     this.pessoaService.CreatePessoa(pessoa).subscribe((info) => {

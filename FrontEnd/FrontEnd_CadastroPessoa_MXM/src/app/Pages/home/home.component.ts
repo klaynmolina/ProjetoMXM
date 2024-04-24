@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ExcluirComponent } from 'src/app/Components/excluir/excluir.component';
 import { Pessoa } from 'src/app/Models/Pessoa';
 import { PessoaService } from 'src/app/Services/pessoa.service';
 
@@ -14,6 +16,14 @@ buscar(event: Event) {
   this.pessoas =  this.buscarPessoas.filter((i) => i.nome.toLowerCase().includes(value));
 }
 
+ExcluirDialog(id: number) {
+  this.dialog.open(ExcluirComponent, {
+    width: '450px',
+    // height: '450px',
+    data: { id: id }
+  });
+}
+
   public pessoas: Pessoa[] = [];
   public buscarPessoas: Pessoa[] = [];
   colunas = [
@@ -26,7 +36,7 @@ buscar(event: Event) {
     'FUNÇÕES ADMINISTRATIVAS'
   ]
 
-  constructor (private pessoaService: PessoaService) { }
+  constructor (private pessoaService: PessoaService, public dialog: MatDialog) { }
   ngOnInit(): void {
     this.pessoaService.GetPessoas().subscribe(
       (info) => {

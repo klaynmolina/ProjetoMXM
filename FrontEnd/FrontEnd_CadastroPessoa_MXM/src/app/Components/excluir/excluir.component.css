@@ -1,0 +1,9 @@
+mat-card {
+    height: 300px;
+}
+
+.excluir-modal-btns {
+    display: flex;
+    justify-content: space-around;
+}
+

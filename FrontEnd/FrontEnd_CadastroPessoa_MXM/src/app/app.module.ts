@@ -17,6 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ExcluirComponent } from './Components/excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MatTableModule } from '@angular/material/table';
     CadastroComponent,
     FormularioComponent,
     AtualizarComponent,
-    DetalharComponent
+    DetalharComponent,
+    ExcluirComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

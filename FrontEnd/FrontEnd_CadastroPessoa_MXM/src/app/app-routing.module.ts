@@ -8,6 +8,7 @@ import { EnderecoComponent } from './Components/endereco/endereco.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: '/', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'atualizar/:id', component: AtualizarComponent},

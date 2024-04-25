@@ -1,5 +1,5 @@
 <mat-card>
-    <h1>{{btnTitulo}}</h1>
+    <h1>Novo Cadastro</h1>
     <form [formGroup]="formularioDados" (ngSubmit)="cadastrar()">
         <input type="hidden" formControlName="id">
         
@@ -34,14 +34,14 @@
         <div class="formulario">
             <mat-form-field>
                 <mat-label for="nome">CEP:</mat-label>
-                <input matInput type="text" formControlName="endereco" placeholder="Digite apenas os números do CEP" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                <input matInput type="text" formControlName="endereco" placeholder="Digite apenas os números do CEP" onkeypress="return event.charCode >= 48 && event.charCode <= 57" style="word-wrap: break-word;" required>
                 <!-- <mat-label for="nome">Endereço:</mat-label>
                 <input matInput type="text" formControlName="endereco" placeholder="Endereço completo" required> -->
             </mat-form-field>
         </div>
 
         <div class="btns">
-            <button type="submit" [disabled]="!formularioDados.valid" mat-raised-button color="primary">{{btnFuncao}}</button>
+            <button type="submit" [disabled]="!formularioDados.valid" mat-raised-button color="primary">{{btnFuncaoCadastrar}}</button>
             <button routerLink="/home" mat-stroked-button color="primary" class="home-page-btn">Página Inicial</button>
         </div>
         

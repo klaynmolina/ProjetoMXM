@@ -1,7 +1,10 @@
 <div>
-    <app-formulario 
+    <!-- <app-formulario 
         [btnFuncao]="btnFuncao" 
         [btnTitulo]="btnTitulo" 
         (onSubmit)="cadastrarPessoa($event)">
-    </app-formulario>
+    </app-formulario> -->
+    <app-formulario-cadastro 
+    (onSubmit)="cadastrarPessoa($event)">
+    </app-formulario-cadastro>
 </div>

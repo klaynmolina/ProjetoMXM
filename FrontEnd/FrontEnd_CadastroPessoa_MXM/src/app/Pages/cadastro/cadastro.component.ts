@@ -17,7 +17,7 @@ export class CadastroComponent {
   constructor(
     private pessoaService: PessoaService, 
     // private router: Router,
-    public dialog: MatDialog
+    public dialog: MatDialog,    
   ) { }
 
   CadastrarDialog() {
@@ -25,11 +25,12 @@ export class CadastroComponent {
       width: '450px',
     });
   }  
-  cadastrarPessoa(pessoa: Pessoa) {
+  
+  cadastrarPessoa(pessoa: Pessoa) {    
     this.pessoaService.CreatePessoa(pessoa).subscribe((info) => {
       // alert(info.mensagem);
       // this.router.navigate(['/home']);
       this.CadastrarDialog();
     })    
-  }
+  }  
 }

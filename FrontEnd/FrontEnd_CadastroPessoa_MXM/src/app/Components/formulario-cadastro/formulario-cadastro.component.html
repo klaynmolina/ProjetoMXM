@@ -1,5 +1,5 @@
 <mat-card>
-    <h1>{{btnTitulo}}</h1>
+    <h1>Novo Cadastro</h1>
     <form [formGroup]="formularioDados" (ngSubmit)="cadastrar()">
         <input type="hidden" formControlName="id">
         
@@ -41,7 +41,7 @@
         </div>
 
         <div class="btns">
-            <button type="submit" [disabled]="!formularioDados.valid" mat-raised-button color="primary">{{btnFuncao}}</button>
+            <button type="submit" [disabled]="!formularioDados.valid" mat-raised-button color="primary">{{btnFuncaoCadastrar}}</button>
             <button routerLink="/home" mat-stroked-button color="primary" class="home-page-btn">Página Inicial</button>
         </div>
         

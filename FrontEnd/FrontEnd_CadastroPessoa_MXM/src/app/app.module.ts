@@ -25,6 +25,9 @@ import { DesativarModalComponent } from './Components/desativar-modal/desativar-
 import { CommonModule } from '@angular/common';
 import { AtivarModalComponent } from './Components/ativar-modal/ativar-modal.component';
 import { EnderecoComponent } from './Components/endereco/endereco.component';
+import { CepModalComponent } from './Components/cep-modal/cep-modal.component';
+import { FormularioCadastroComponent } from './Components/formulario-cadastro/formulario-cadastro.component';
+import { FormularioAtualizarComponent } from './Components/formulario-atualizar/formulario-atualizar.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { EnderecoComponent } from './Components/endereco/endereco.component';
     DesativarModalComponent,
     AtivarModalComponent,
     EnderecoComponent,
+    CepModalComponent,
+    FormularioCadastroComponent,
+    FormularioAtualizarComponent,
   ],
   imports: [
     CommonModule,

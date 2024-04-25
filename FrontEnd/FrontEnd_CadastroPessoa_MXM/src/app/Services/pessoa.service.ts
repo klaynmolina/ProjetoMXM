@@ -9,13 +9,14 @@ import { Response } from '../Models/Response';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PessoaService {
   private urlAPIDevelopment = `${environmentDevelopment.API_URL}/Pessoa`
   private urlAPI = `${environment.API_URL}/Pessoa`
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,) { }
 
-  GetPessoas() : Observable<Response<Pessoa[]>> {
+   GetPessoas() : Observable<Response<Pessoa[]>> {
     return this.http.get<Response<Pessoa[]>>(this.urlAPI+"/listarTodos");
   }
 

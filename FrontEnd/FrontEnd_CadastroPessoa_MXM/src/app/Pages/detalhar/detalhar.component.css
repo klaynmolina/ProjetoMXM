@@ -16,3 +16,7 @@ mat-form-field {
     background-color: #89BF04 !important;
     color: white !important;
 }
+
+textarea {
+    resize: none;
+}

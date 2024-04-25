@@ -10,6 +10,7 @@ import { PessoaService } from 'src/app/Services/pessoa.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
 buscar(event: Event) {
   const target = event.target as HTMLInputElement;
   const value = target.value.toLowerCase();
@@ -53,6 +54,13 @@ ExcluirDialog(id: number) {
             i.documento = this.formatCnpj(i.documento);
           }
 
+          // Aplicação Máscara Telefone
+          if(i.telefone.length == 8) {
+            i.telefone = this.formatTelefone(i.telefone);
+          } else {
+            i.telefone = this.formatCelular(i.telefone);
+          }
+
         })
         this.pessoas = info.dados;
         this.buscarPessoas = info.dados;
@@ -68,6 +76,16 @@ ExcluirDialog(id: number) {
   // Máscara CNPJ
   private formatCnpj(value: string): string {
     return value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+  }
+
+  // Máscara Telefone Fixo
+  private formatTelefone(value: string): string {
+    return value.replace(/^(\d{4})(\d{4})$/, "$1-$2");
+  }
+
+  // Máscara Celular
+  private formatCelular(value: string): string {
+    return value.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
   }
 
 }

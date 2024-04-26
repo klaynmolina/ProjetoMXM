@@ -47,7 +47,6 @@ export class FormularioAtualizarComponent {
     const enderecoCompleto = this.formularioDados.value.endereco;
     const somenteCEP = enderecoCompleto.slice(-9).replace(/-/g, "");
 
-    const id = this.formularioDados.value.id;
     const email = this.formularioDados.value.email;
     const documento = this.formularioDados.value.documento;   
 

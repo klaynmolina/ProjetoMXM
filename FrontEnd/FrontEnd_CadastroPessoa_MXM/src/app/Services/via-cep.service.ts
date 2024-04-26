@@ -25,7 +25,7 @@ export class ViaCepService {
     if (data.erro) {      
       return `${data.erro}`;
     } else {
-      return `${data.logradouro}, ${data.bairro}, ${data.localidade}-${data.uf} || CEP: ${data.cep}`;
+      return `${data.logradouro}, ${data.bairro}, ${data.localidade}-${data.uf} - CEP: ${data.cep}`;
     }
   }
 

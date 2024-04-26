@@ -1,7 +1,7 @@
 # CADASTRO DE PESSOA
 
 ## Resumo:
-O projeto "Cadastro de Pessoa" foi desenvolvido com foco na abordagem back end first, utilizando a linguagem de programação .NET e o Swagger para testes iniciais da conexão com o banco de dados SQL Server, além de validar cada endpoint criado. Para o desenvolvimento do front end, optou-se pelo Angular na versão 16.2, aproveitando os recursos da biblioteca Angular Material para aprimorar a estilização da interface.
+O projeto "Cadastro de Pessoa" foi desenvolvido com foco na abordagem back end first, utilizando a linguagem de programação C# com ASP.NET Core e o Swagger para testes iniciais da conexão com o banco de dados SQL Server, além de validar cada endpoint criado. Para o desenvolvimento do front end, optou-se pelo Angular na versão 16.2, aproveitando os recursos da biblioteca Angular Material para aprimorar a estilização da interface.
 
 ## Boas práticas:
 - **Delegação de Responsabilidade:** O código segue o princípio de delegar funções aos serviços, evitando a criação de um "controlador inchado", o que poderia dificultar a manutenção futura.

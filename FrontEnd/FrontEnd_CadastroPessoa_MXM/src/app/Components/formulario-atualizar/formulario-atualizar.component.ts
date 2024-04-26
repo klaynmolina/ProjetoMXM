@@ -47,6 +47,7 @@ export class FormularioAtualizarComponent {
     const enderecoCompleto = this.formularioDados.value.endereco;
     const somenteCEP = enderecoCompleto.slice(-9).replace(/-/g, "");
 
+    const id = this.formularioDados.value.id;
     const email = this.formularioDados.value.email;
     const documento = this.formularioDados.value.documento;   
 
@@ -54,6 +55,8 @@ export class FormularioAtualizarComponent {
     let testeDocumento = await this.validarDuplicidadeDocumento(documento);
     
     if(testeEmail || testeDocumento) {
+      console.log(123);
+      
       this.DuplicidadeDialog();
       return;
     }
@@ -101,7 +104,7 @@ export class FormularioAtualizarComponent {
       const cadastros: Pessoa[] = resposta;
 
       // Verifica se algum dos cadastros tem o email desejado
-      return cadastros.some((pessoa: Pessoa) => pessoa.email === email);
+      return cadastros.some((pessoa: Pessoa) => pessoa.email === email && pessoa.id != this.formularioDados.value.id);
     }
 
     async validarDuplicidadeDocumento(documento: string) {
@@ -115,7 +118,7 @@ export class FormularioAtualizarComponent {
       const cadastros: Pessoa[] = resposta;
 
       // Verifica se algum dos cadastros tem o documento desejado
-      return cadastros.some((pessoa: Pessoa) => pessoa.documento === documento);
+      return cadastros.some((pessoa: Pessoa) => pessoa.documento === documento && pessoa.id != this.formularioDados.value.id);
     }
 
 }

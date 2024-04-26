@@ -112,4 +112,24 @@ export class FormularioCadastroComponent {
       return cadastros.some((pessoa: Pessoa) => pessoa.documento === documento);
     }
 
+    onPaste(event: ClipboardEvent): void {
+      event.preventDefault(); // Impede a ação padrão de colagem
+  
+      // Obtém os dados colados
+      navigator.clipboard.readText().then(pastedData => {
+        // Remove caracteres especiais e espaços usando uma expressão regular
+        const sanitizedText = pastedData.replace(/[^\w\s]/gi, '').replace(/\s+/g, '');
+  
+        // Obtém a referência do campo de entrada e define o valor com os dados sanitizados
+        const input = event.target as HTMLInputElement;
+        input.value = sanitizedText;
+  
+        // Adiciona uma pequena pausa antes de remover as classes de validação
+        setTimeout(() => {
+          input.dispatchEvent(new Event('input')); // Dispara um evento de entrada para acionar a validação
+          input.dispatchEvent(new Event('blur')); // Dispara um evento de desfoque para forçar a validação
+        });
+      });
+    }
+
 }

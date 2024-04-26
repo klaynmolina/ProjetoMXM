@@ -120,5 +120,20 @@ export class FormularioAtualizarComponent {
       // Verifica se algum dos cadastros tem o documento desejado
       return cadastros.some((pessoa: Pessoa) => pessoa.documento === documento && pessoa.id != this.formularioDados.value.id);
     }
+    
+    onPaste(event: ClipboardEvent): void {
+      event.preventDefault(); // Impede a ação padrão de colagem
+  
+      // Obtém os dados colados
+      navigator.clipboard.readText().then(pastedData => {
+        // Remove caracteres especiais usando uma expressão regular
+        const sanitizedText = pastedData.replace(/[^\w\s]/gi, '');
+  
+        // Obtém a referência do campo de entrada e define o valor com os dados sanitizados
+        const input = event.target as HTMLInputElement;
+        input.value = sanitizedText;
+        this.formularioDados.value.documento = sanitizedText;
+      });
+    }
 
 }

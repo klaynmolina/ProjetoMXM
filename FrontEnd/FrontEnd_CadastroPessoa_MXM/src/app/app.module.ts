@@ -28,6 +28,7 @@ import { EnderecoComponent } from './Components/endereco/endereco.component';
 import { CepModalComponent } from './Components/cep-modal/cep-modal.component';
 import { FormularioCadastroComponent } from './Components/formulario-cadastro/formulario-cadastro.component';
 import { FormularioAtualizarComponent } from './Components/formulario-atualizar/formulario-atualizar.component';
+import { DuplicidadeModalComponent } from './Components/duplicidade-modal/duplicidade-modal.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FormularioAtualizarComponent } from './Components/formulario-atualizar/
     CepModalComponent,
     FormularioCadastroComponent,
     FormularioAtualizarComponent,
+    DuplicidadeModalComponent,
   ],
   imports: [
     CommonModule,

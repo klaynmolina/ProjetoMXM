@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
+import { Observable, firstValueFrom, map, toArray } from 'rxjs';
 import { Pessoa } from 'src/app/Models/Pessoa';
 import { ViaCepService } from 'src/app/Services/via-cep.service';
 import { CepModalComponent } from '../cep-modal/cep-modal.component';
+import { PessoaService } from 'src/app/Services/pessoa.service';
+import { DuplicidadeModalComponent } from '../duplicidade-modal/duplicidade-modal.component';
 
 @Component({
   selector: 'app-formulario-cadastro',
@@ -23,6 +25,7 @@ export class FormularioCadastroComponent {
 
   constructor(
     private viaCepService: ViaCepService,
+    private pessoaService: PessoaService,
     public dialog: MatDialog,
   ) { }
   
@@ -41,18 +44,29 @@ export class FormularioCadastroComponent {
     });   
   }
 
-  async cadastrar() {
-      try {
-        const cep = this.formularioDados.value.endereco;
-        this.endereco = await this.viaCepService.buscarEndereco(cep);
-        if(this.endereco == 'true') {
-          this.CepDialog();
-          return;
-        }
-        this.formularioDados.value.endereco = this.endereco;
-      } catch (error) {
+  async cadastrar() {    
+    const email = this.formularioDados.value.email;
+    const documento = this.formularioDados.value.documento;    
+    try {
+      const cep = this.formularioDados.value.endereco;
+      this.endereco = await this.viaCepService.buscarEndereco(cep);
+      if(this.endereco == 'true') {
         this.CepDialog();
         return;
+      }
+      
+      let testeEmail = await this.validarDuplicidadeEmail(email);
+      let testeDocumento = await this.validarDuplicidadeDocumento(documento);
+      
+      if( testeEmail || testeDocumento) {
+        this.DuplicidadeDialog();
+        return;
+      }
+      
+      this.formularioDados.value.endereco = this.endereco;
+    } catch (error) {
+      this.CepDialog();
+      return;
     }   
     this.onSubmit.emit(this.formularioDados.value);
     // console.log(this.formularioDados.value);  
@@ -63,5 +77,39 @@ export class FormularioCadastroComponent {
       width: '450px',
     });
   }  
+
+  DuplicidadeDialog() {
+    this.dialog.open(DuplicidadeModalComponent, {
+      width: '450px',
+    });
+  } 
+
+    async validarDuplicidadeEmail(email: string) {
+      const cadastrosResponse = await firstValueFrom(this.pessoaService.GetPessoas());
+      const resposta = cadastrosResponse.dados; 
+      
+      if (!resposta) {
+          return false; // Retorna false se os dados forem indefinidos
+      }
+
+      const cadastros: Pessoa[] = resposta;
+
+      // Verifica se algum dos cadastros tem o email desejado
+      return cadastros.some((pessoa: Pessoa) => pessoa.email === email);
+    }
+
+    async validarDuplicidadeDocumento(documento: string) {
+      const cadastrosResponse = await firstValueFrom(this.pessoaService.GetPessoas());
+      const resposta = cadastrosResponse.dados;
+
+      if (!resposta) {
+          return false; // Retorna false se os dados forem indefinidos
+      }
+
+      const cadastros: Pessoa[] = resposta;
+
+      // Verifica se algum dos cadastros tem o documento desejado
+      return cadastros.some((pessoa: Pessoa) => pessoa.documento === documento);
+    }
 
 }

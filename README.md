@@ -10,10 +10,12 @@ O projeto "Cadastro de Pessoa" foi desenvolvido com foco na abordagem back end f
 - **Componentização Angular:** O projeto faz uso extensivo dos componentes do Angular para segmentar a criação de diferentes funcionalidades, facilitando a organização e manutenção do código.
 
 ## Funções:
-- **Atualizar Cadastro**
-- **Desativar Cadastro**
-- **Ativar Cadastro**
-- **Excluir Cadastro**
+- **Criar cadastro**
+- **Pesquisar cadastro**
+- **Atualizar cadastro**
+- **Excluir cadastro**
+- **Ativar cadastro.**
+- **Desativar cadastro.**
 
 ## Validações:
 - **Modelo Padrão de Email:** As inserções de email seguem um padrão de validação.
@@ -21,6 +23,7 @@ O projeto "Cadastro de Pessoa" foi desenvolvido com foco na abordagem back end f
 - **Bloqueio de Duplicatas:** Evita-se a inserção de documentos e emails duplicados.
 - **Quantidade Mínima de Caracteres:** Estabeleceu-se um mínimo de caracteres para nome, telefone e documento.
 - **Bloqueio de Inserção de Letras:** Impede-se a inserção de letras em campos como documento, telefone e CEP.
+- **Bloqueio de modificações não autorizadas:** Impede-se a atualização de cadastros desativados.
 
 # Tecnologias Utilizadas
 

@@ -12,11 +12,6 @@ mat-form-field {
     margin-top: 20px;
 }
 
-.ativar-btn {
-    background-color: #89BF04 !important;
-    color: white !important;
-}
-
 textarea {
     resize: none;
 }

@@ -61,11 +61,11 @@
             </div>
     
             <div class="btns">
-                <button (click)="desativarCadastro()" mat-raised-button color="warn">Desativar Cadastro</button>
-                <button (click)="ativarCadastro()" mat-raised-button class="ativar-btn">Ativar Cadastro</button>
+                <button (click)="desativarCadastro()" [disabled]="pessoa.statusCadastro == false" mat-raised-button color="warn">Desativar Cadastro</button>
+                <button (click)="ativarCadastro()" mat-raised-button [disabled]="pessoa.statusCadastro == true" mat-raised-button color="primary">Ativar Cadastro</button>
             </div>
             <div class="btns">
-                <button routerLink="/atualizar/{{pessoa.id}}" mat-raised-button color="primary">Atualizar Cadastro</button>
+                <button routerLink="/atualizar/{{pessoa.id}}" [disabled]="pessoa.statusCadastro == false" mat-raised-button color="primary">Atualizar Cadastro</button>
                 <button routerLink="/home" mat-stroked-button color="primary" class="home-page-btn">Página Inicial</button>
             </div>
         </form>
